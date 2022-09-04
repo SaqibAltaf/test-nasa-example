@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+
+body {
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", "Poppins", Arial, Helvetica, sans-serif;
+}
+body * {
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.mr_left_20 {
+    margin-left: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.fn-12 {
+    font-size: 12px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.d-flex {
+    display: flex;
 }
 
-.App-link {
-  color: #61dafb;
+.pointer {
+    cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.orarray {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.css-ptiqhd-MuiSvgIcon-root {
+    color: gray;
+}
+.css-17jjc08-MuiDataGrid-footerContainer {
+    display: none !important;
+}
+
+.css-1td8sue-MuiSvgIcon-root-MuiSelect-icon {
+    color: gray;
+}
+.css-1kmjq93-MuiButtonBase-root-MuiIconButton-root.Mui-disabled {
+    background-color: transparent;
+    color: gray !important;
+}
+
+.css-1nkaazf-MuiSvgIcon-root-MuiSelect-icon {
+    color: gray !important;
+}
+
+.width_short {
+    width: 24%;
+}
+
+.width_long {
+    width: 29%;
+}
+
+.or-wrapper {
+    width: 9%;
+    text-align: center;
+}
+
+.action-button {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 9%;
+}
+
+@media (max-width: 982px) {
+    .width_short {
+        width: 100%;
+        justify-content: center;
+    }
+    .width_long {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .or-wrapper {
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .action-button {
+        margin: 0 auto;
+    }
 }

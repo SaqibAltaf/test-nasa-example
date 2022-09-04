@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import HomePage from "./pages/home";
+import { myCreateTheme } from "./theme";
+import { ThemeProvider } from "@mui/material/styles";
+import { Container } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const theme = useTheme();
+    const classes: any = makeStyle(theme);
+    return (
+        <ThemeProvider theme={myCreateTheme()}>
+            <Container sx={classes.container} maxWidth="lg">
+                <HomePage />
+            </Container>
+        </ThemeProvider>
+    );
 }
+
+const makeStyle = (theme: any) => {
+    return {
+        container: {
+            display: "flex",
+            alignItems: "center",
+            [theme.breakpoints.down("md")]: {
+                flexWrap: "wrap",
+                justifyContent: "center",
+            },
+        },
+    };
+};
 
 export default App;
